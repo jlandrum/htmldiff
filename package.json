@@ -1,0 +1,11 @@
+{
+  "name": "htmldiff",
+  "version": "1.0.0",
+  "description": "Diff util to detect class and ID changes in HTML files",
+  "main": "index.js",
+  "bin": {
+  	"htmldiff": "./index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
