@@ -54,7 +54,7 @@ function getChanges(input) {
 	));
 }
 
-exec(`git --no-pager diff ${process.argv[2]||'HEAD~2'} ${process.argv[3]||'HEAD'} --diff-filter=M -U0 -- '*.html' | grep -i -P '^- |^\\+ |^diff|@@'`, 
+exec(`git --no-pager diff ${process.argv[2]||'HEAD~2'} ${process.argv[3]||'HEAD'} --diff-filter=M -U0 -- '*.html' | grep -Ei '^- |^\\+ |^diff|@@'`, 
 	(err, stdout, stderr) => {
 		if (err) {
 			console.log('diff failed. Check that git is installed properly and you are in a repo.'.red);
